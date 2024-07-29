@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const files = event.dataTransfer.files;
         console.log('Files dropped:', files); // Debugging
         for (const file of files) {
-            if (file.type === 'text/tab-separated-values' || file.type === 'text/tsv' || file.name.endsWith('.tsv')) {
+            if (file.type === 'text/tab-separated-values' || file.type === 'text/tsv' || file.name.endsWith('.tsv') || file.name.endsWith('.csv')) {
                 parseTSV(file);
             } else {
                 alert("Only TSV files are supported.");
